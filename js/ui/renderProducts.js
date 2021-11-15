@@ -10,7 +10,8 @@ export function renderProducts(productsToRender) {
                                 <div class="image-container">
                                <img class="image" src="${api}${product.image[0].url}" alt=""${product.name}>
                                 </div>
-                                <h4>${product.name}</h4>
+                                <h4 class="product-name">${product.name}</h4>
+                                <p class="product-price">$ ${product.price}</p>
                     
                                     
                                       </div>`;
