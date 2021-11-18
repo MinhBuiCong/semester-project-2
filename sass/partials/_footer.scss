@@ -1,0 +1,15 @@
+.footer {
+  max-width: 1140px;
+  margin: 0 auto;
+  background-color: black;
+  display: flex;
+  .footer-section {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    h3 {
+      background-color: none;
+    }
+  }
+}

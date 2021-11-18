@@ -20,16 +20,16 @@ export function renderBestOfferCard(products) {
   for (let i = 0; i < products.length; i++) {
     productsContainer.innerHTML = `<div class="card">
                                                <div class="image-container">
-                                              <img class="image" src="${api}${products[0].image[0].url}" alt=""${products[0].name}>
+                                              <img class="image" src="${api}${products[0].image[0].url}" alt=""${products[0].product}>
                                                 </div>
-                                               <h4 class="product-name">${products[0].name}</h4>
+                                               <h4 class="product-name">${products[0].product}</h4>
                                                 <p class="product-price">$ ${products[0].price}</p>
                                             </div>
                                     <div class="card">
                                                <div class="image-container">
-                                              <img class="image" src="${api}${products[1].image[0].url}" alt=""${products[1].name}>
+                                              <img class="image" src="${api}${products[1].image[0].url}" alt=""${products[1].product}>
                                                 </div>
-                                               <h4 class="product-name">${products[1].name}</h4>
+                                               <h4 class="product-name">${products[1].product}</h4>
                                                 <p class="product-price">$ ${products[1].price}</p>
                                             </div>`;
   }
