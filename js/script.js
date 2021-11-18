@@ -3,7 +3,7 @@ import { menu } from "./components/menu.js";
 import { getBestOfferApi } from "./ui/renderBestOfferCard.js";
 import { getBestSellerApi } from "./ui/renderBestSellerCard.js";
 
-const contentContainer = document.querySelector(".content");
+export const contentContainer = document.querySelector(".content");
 
 navbar();
 menu();

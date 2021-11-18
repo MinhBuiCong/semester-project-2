@@ -1,6 +1,8 @@
 import { api } from "../settings/api.js";
+import { displayMessage } from "../components/displayMessage.js";
+import { contentContainer } from "../script.js";
 
-export const bestSellerUrl = api + "/" + "best-seller/";
+export const bestSellerUrl = api + "/" + "best-sellers/";
 export const productsContainer = document.querySelector(".container-2");
 
 export async function getBestSellerApi() {
@@ -9,7 +11,7 @@ export async function getBestSellerApi() {
     const products = await response.json();
     renderBestSellerCard(products);
   } catch (error) {
-    displayMessage(error, "404 - page not found", ".content");
+    displayMessage(error, "404 - page not found", ".container-2");
   }
 }
 

@@ -1,19 +1,7 @@
-@import "partials/base";
 @import "partials/custom";
+@import "partials/base";
 @import "partials/navbar";
 @import "partials/menu";
 @import "partials/breadcrumbs";
 @import "partials/section";
 @import "partials/product-card";
-
-body {
-  background-color: white;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-}
