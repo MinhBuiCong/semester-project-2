@@ -1,3 +1,58 @@
+@media screen and (max-width: 1140px) {
+  .navbar-content > .navbar > .container-fluid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navbar-content > .navbar > .container-fluid .navbar-brand {
+    margin: 0 auto 1rem auto;
+  }
+  .navbar-content > .navbar > .container-fluid .search-container {
+    width: 100%;
+    margin: 0 auto 0.5rem auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navbar-content > .navbar > .container-fluid .search-container input {
+    width: 100%;
+    height: 2rem;
+  }
+  .navbar-content > .navbar > .container-fluid .search-container button {
+    margin-left: -75px;
+    border: none;
+    background-color: white;
+    height: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .menubar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+  }
+  .menubar .nav {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .menubar .nav li > a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
 .product-card {
   border: 1px solid rgba(0, 0, 0, 0.164);
   width: 300px;

@@ -2,6 +2,7 @@ import { api } from "./settings/api.js";
 import { renderProducts } from "./ui/renderProducts.js";
 import { displayMessage } from "./components/displayMessage.js";
 import { navbar } from "./components/navbar.js";
+import { menu } from "./components/menu.js";
 
 export const productsUrl = api + "/" + "products/";
 export const cardContainer = document.querySelector(".card-container");
@@ -19,3 +20,4 @@ export async function getApi() {
 
 getApi();
 navbar();
+menu();
