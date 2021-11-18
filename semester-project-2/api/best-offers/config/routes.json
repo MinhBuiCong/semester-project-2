@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/best-offers",
+      "handler": "best-offers.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/best-offers/count",
+      "handler": "best-offers.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/best-offers/:id",
+      "handler": "best-offers.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/best-offers",
+      "handler": "best-offers.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/best-offers/:id",
+      "handler": "best-offers.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/best-offers/:id",
+      "handler": "best-offers.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

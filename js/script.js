@@ -4,7 +4,7 @@ import { menu } from "./components/menu.js";
 import { renderProductCard } from "./ui/renderProductCard.js";
 import { displayMessage } from "./components/displayMessage.js";
 
-export const productsUrl = api + "/" + "products/";
+export const productsUrl = api + "/" + "best-offers/";
 export const productsContainer = document.querySelector(".products-container");
 const contentContainer = document.querySelector(".content");
 
