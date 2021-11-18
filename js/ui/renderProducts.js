@@ -1,4 +1,4 @@
-import { cardContainer } from "../script.js";
+import { cardContainer } from "../product-page.js";
 import { api } from "../settings/api.js";
 
 export function renderProducts(productsToRender) {
