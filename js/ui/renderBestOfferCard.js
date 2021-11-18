@@ -1,7 +1,19 @@
-import { productsContainer } from "../script.js";
 import { api } from "../settings/api.js";
 
-export function renderProductCard(products) {
+export const bestOfferUrl = api + "/" + "best-offers/";
+export const productsContainer = document.querySelector(".container-1");
+
+export async function getBestOfferApi() {
+  try {
+    const response = await fetch(bestOfferUrl);
+    const products = await response.json();
+    renderBestOfferCard(products);
+  } catch (error) {
+    displayMessage(error, "404 - page not found", ".content");
+  }
+}
+
+export function renderBestOfferCard(products) {
   productsContainer.innerHTML = "";
   for (let i = 0; i < products.length; i++) {
     productsContainer.innerHTML = `<div class="card">
