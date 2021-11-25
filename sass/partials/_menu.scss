@@ -14,7 +14,14 @@
     }
     li > .dropdown-menu {
       background-color: $secondary-color;
-      padding: 20px;
+    }
+    li > .dropdown-item:hover {
+      background-color: black;
+      color: white;
+    }
+    .nav-item:hover {
+      background-color: black;
+      color: white;
     }
   }
 }
