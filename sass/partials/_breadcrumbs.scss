@@ -3,4 +3,11 @@
   nav {
     margin: 1rem;
   }
+  nav > ol > li > a {
+    text-decoration: none;
+    color: white;
+  }
+  nav > ol > li > a:hover {
+    text-decoration: underline;
+  }
 }

@@ -1,15 +1,28 @@
 .navbar-content {
   background-color: $secondary-color;
-  max-width: 1140px;
-  margin: 0 auto;
-}
-.navbar-content > .navbar > .container-fluid {
-  flex-direction: column;
-  padding: 0;
-  .navbar-brand {
-    margin: 0 auto 1rem auto;
+  border-bottom: 1px solid grey;
+  .navbar {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  .navbar > .container-fluid {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .navbar-top-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .navbar-top-wrapper > .navbar-brand-container > .navbar-brand {
+    margin: 0 0 1rem 0;
     color: $primary-color;
-    font-size: 40px;
+    font-size: $header-secondary;
+  }
+  .navbar-top-wrapper > .navbar-icon-container > svg {
+    color: $text-color;
+    margin: 1rem 2rem;
   }
   .search-container {
     width: 100%;
@@ -18,21 +31,21 @@
 
     input {
       width: 100%;
-      height: 3rem;
+      height: 2.5rem;
       padding: 5px;
       padding-left: 20px;
-      border: 1px solid yellow;
+      border: 1px solid $cta-color;
       background-color: $third-color;
     }
     textarea,
     input {
       outline: none;
-      color: white;
+      color: $text-color;
     }
     button {
       margin-left: -75px;
       padding: 0 10px;
-      border: 1px solid yellow;
+      border: 1px solid $cta-color;
       border-left: none;
       background-color: $third-color;
       color: $text-color;

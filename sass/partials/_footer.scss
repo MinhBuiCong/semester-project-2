@@ -1,6 +1,6 @@
 .footer {
   width: 100%;
-  background-color: rgb(255, 214, 80);
+  background-color: $footer-color;
 }
 
 .footer-wrapper {
@@ -14,7 +14,7 @@
     margin: 2rem 1rem;
     h3 {
       background-color: none;
-      font-size: 22px;
+      font-size: $header-third;
     }
     hr {
       height: 2px;
@@ -22,10 +22,21 @@
     a {
       text-decoration: none;
       color: black;
-      font-size: 16px;
+      font-size: $text-primary;
+    }
+    p {
+      color: black;
+      font-size: $text-primary;
+      margin: 0;
     }
     h2 {
-      font-size: 30px;
+      font-size: $header-secondary;
+    }
+    p:hover {
+      text-decoration: underline;
+    }
+    a:hover {
+      text-decoration: underline;
     }
   }
 }

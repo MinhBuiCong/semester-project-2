@@ -16,11 +16,11 @@
       background-color: $secondary-color;
     }
     li > .dropdown-item:hover {
-      background-color: black;
+      background-color: $hover-color;
       color: white;
     }
     .nav-item:hover {
-      background-color: black;
+      background-color: $hover-color;
       color: white;
     }
   }

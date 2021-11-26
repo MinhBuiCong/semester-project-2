@@ -11,6 +11,13 @@ body {
 }
 
 .content {
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
+.content .main-container {
+  width: 100%;
+  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,42 +31,46 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 auto;
-  max-width: 1140px;
+  margin-bottom: 4rem;
 }
 
-.content .main-content {
-  background-image: url("/images/home-page/main-image.jpg");
+.content .main-container .main-content {
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  width: 100%;
+  width: 97%;
   height: 50vh;
   -o-object-fit: cover;
      object-fit: cover;
-  margin-bottom: 2rem;
+  margin: 1rem auto;
 }
 
-.content .main-content > h1 {
+.content .main-container .main-content > h1 {
   color: #55b1c4;
   margin: 3rem 0;
   background: none;
   text-align: center;
+  font-size: 40px;
 }
 
-.content .main-content > h2 {
-  color: #bbbbbb;
-  margin: 10rem 0 0 0;
+.content .main-container .main-content > h2 {
+  color: #fff;
+  margin: 15rem 0 0 0;
   background: none;
   text-align: center;
+  font-size: 32px;
 }
 
 .navbar-content {
   background-color: #151e20;
+  border-bottom: 1px solid grey;
+}
+
+.navbar-content .navbar {
   max-width: 1140px;
   margin: 0 auto;
 }
 
-.navbar-content > .navbar > .container-fluid {
+.navbar-content .navbar > .container-fluid {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -67,13 +78,28 @@ body {
   padding: 0;
 }
 
-.navbar-content > .navbar > .container-fluid .navbar-brand {
-  margin: 0 auto 1rem auto;
-  color: #55b1c4;
-  font-size: 40px;
+.navbar-content .navbar-top-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
 }
 
-.navbar-content > .navbar > .container-fluid .search-container {
+.navbar-content .navbar-top-wrapper > .navbar-brand-container > .navbar-brand {
+  margin: 0 0 1rem 0;
+  color: #55b1c4;
+  font-size: 32px;
+}
+
+.navbar-content .navbar-top-wrapper > .navbar-icon-container > svg {
+  color: #fff;
+  margin: 1rem 2rem;
+}
+
+.navbar-content .search-container {
   width: 100%;
   margin: 0 auto 0.5rem auto;
   display: -webkit-box;
@@ -81,28 +107,28 @@ body {
   display: flex;
 }
 
-.navbar-content > .navbar > .container-fluid .search-container input {
+.navbar-content .search-container input {
   width: 100%;
-  height: 3rem;
+  height: 2.5rem;
   padding: 5px;
   padding-left: 20px;
-  border: 1px solid yellow;
+  border: 1px solid #fb5607;
   background-color: #27363a;
 }
 
-.navbar-content > .navbar > .container-fluid .search-container textarea,
-.navbar-content > .navbar > .container-fluid .search-container input {
+.navbar-content .search-container textarea,
+.navbar-content .search-container input {
   outline: none;
-  color: white;
+  color: #fff;
 }
 
-.navbar-content > .navbar > .container-fluid .search-container button {
+.navbar-content .search-container button {
   margin-left: -75px;
   padding: 0 10px;
-  border: 1px solid yellow;
+  border: 1px solid #fb5607;
   border-left: none;
   background-color: #27363a;
-  color: #bbbbbb;
+  color: #fff;
   cursor: default;
 }
 
@@ -130,7 +156,7 @@ body {
 
 .menubar .nav li > a {
   text-decoration: none;
-  color: #bbbbbb;
+  color: #fff;
   font-family: "Roboto", sans-serif;
 }
 
@@ -139,12 +165,12 @@ body {
 }
 
 .menubar .nav li > .dropdown-item:hover {
-  background-color: black;
+  background-color: #000;
   color: white;
 }
 
 .menubar .nav .nav-item:hover {
-  background-color: black;
+  background-color: #000;
   color: white;
 }
 
@@ -154,6 +180,15 @@ body {
 
 .breadcrumbs nav {
   margin: 1rem;
+}
+
+.breadcrumbs nav > ol > li > a {
+  text-decoration: none;
+  color: white;
+}
+
+.breadcrumbs nav > ol > li > a:hover {
+  text-decoration: underline;
 }
 
 .section {
@@ -167,16 +202,13 @@ body {
           flex-direction: column;
 }
 
-.section .best-offer > h2 {
-  background-color: #f7fa47;
+.section div > h2 {
+  background-color: #000;
+  color: #fff;
   text-align: center;
-  margin-bottom: 2rem;
-}
-
-.section .best-seller > h2 {
-  background-color: teal;
-  text-align: center;
-  margin-bottom: 2rem;
+  margin: 0 1rem 2rem 1rem;
+  padding: 0.5rem;
+  font-size: 22px;
 }
 
 .products-container {
@@ -193,21 +225,23 @@ body {
 }
 
 .products-container .card {
-  border: 1px solid rgba(255, 255, 255, 0.164);
+  -webkit-box-shadow: 3px 3px 5px rgba(77, 77, 77, 0.336);
+          box-shadow: 3px 3px 5px rgba(77, 77, 77, 0.336);
   width: 300px;
-  margin: 0 50px 100px 50px;
-  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.055);
-          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.055);
-  background-color: #151e20;
+  margin: 0 2rem 2rem 2rem;
 }
 
-.products-container .card > .image-container {
+.products-container .card a {
+  text-decoration: none;
+}
+
+.products-container .card > a > .image-container {
   width: 100%;
   height: 300px;
   margin-bottom: 1rem;
 }
 
-.products-container .card > .image-container .image {
+.products-container .card > a > .image-container .image {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -218,12 +252,25 @@ body {
 
 .products-container .product-name {
   text-align: center;
-  color: #bbbbbb;
+  color: #000;
+  font-size: 22px;
 }
 
 .products-container .product-price {
   text-align: center;
-  color: #bbbbbb;
+  color: #000;
+  font-size: 16px;
+}
+
+.products-container .add-to-cart {
+  background-color: #fb5607;
+  border: none;
+  text-transform: uppercase;
+  padding: 0.5rem;
+}
+
+.products-container .add-to-cart:hover {
+  opacity: 0.5;
 }
 
 .product-card {
@@ -258,7 +305,7 @@ body {
 
 .footer {
   width: 100%;
-  background-color: #ffd650;
+  background-color: #f7fe72;
 }
 
 .footer-wrapper {
@@ -296,7 +343,21 @@ body {
   font-size: 16px;
 }
 
+.footer-wrapper .footer-section p {
+  color: black;
+  font-size: 16px;
+  margin: 0;
+}
+
 .footer-wrapper .footer-section h2 {
-  font-size: 30px;
+  font-size: 32px;
+}
+
+.footer-wrapper .footer-section p:hover {
+  text-decoration: underline;
+}
+
+.footer-wrapper .footer-section a:hover {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=style.css.map */
