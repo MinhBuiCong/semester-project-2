@@ -19,17 +19,17 @@ export function menu() {
     </ul>
   </li>
 
-  <li class="nav-item">
+  <li class="nav-item link-1">
     <a class="nav-link" href="./product-page.html">Mobile</a>
   </li>
-  <li class="nav-item">
+  <li class="nav-item link-2">
     <a class="nav-link" href="./product-page.html">Consoles</a>
   </li>
-  <li class="nav-item">
+  <li class="nav-item link-3">
     <a class="nav-link" href="./product-page.html">Tablets</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="./product-page.html">Mac & PC</a>
+  <li class="nav-item link-4">
+    <a class="nav-link " href="./product-page.html">Mac & PC</a>
   </li>
 </ul>`;
 }

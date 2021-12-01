@@ -25,3 +25,17 @@
     }
   }
 }
+
+@media screen and(max-width:629px ) {
+  .link-1,
+  .link-2,
+  .link-3,
+  .link-4 {
+    display: none;
+  }
+  .dropdown {
+    margin: 0 auto;
+  }
+}
+@media screen and(max-width:505px ) {
+}

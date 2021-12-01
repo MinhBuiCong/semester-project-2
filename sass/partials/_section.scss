@@ -56,3 +56,31 @@
     opacity: 0.5;
   }
 }
+
+@media screen and(max-width:900px ) {
+  .products-container {
+    .card > a > .image-container {
+      height: 200px;
+      .image {
+        height: 80%;
+      }
+    }
+    .product-name {
+      margin-bottom: 5px;
+    }
+    .product-price {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+@media screen and(max-width:600px ) {
+  .products-container {
+    display: flex;
+    flex-direction: column;
+
+    .card {
+      margin: 0 auto 2rem auto;
+    }
+  }
+}
