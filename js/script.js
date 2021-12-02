@@ -5,8 +5,6 @@ import { getBestSellerApi } from "./ui/renderBestSellerCard.js";
 import { getBanner } from "./components/heroBanner.js";
 import { footer } from "./components/footer.js";
 
-export const contentContainer = document.querySelector(".content");
-
 navbar();
 menu();
 getBestOfferApi();
