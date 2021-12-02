@@ -14,17 +14,16 @@ export async function getProductApi() {
   }
 }
 
-export function renderProducts(product) {
+export function renderProducts(products) {
   cardContainer.innerHTML = "";
 
-  for (let i = 0; i < product.length; i++) {
-    console.log(`products`, product.length);
+  for (let i = 0; i < products.length; i++) {
     cardContainer.innerHTML += `<div class="product-card">
                                   <div class="image-container">
-                                    <img class="image" src="${api}${product[i].image[0].url}" alt=""${product[i].name}>
+                                    <img class="image" src="${api}${products[i].image[0].url}" alt=""${products[i].name}>
                                   </div>
-                                    <h4 class="product-name">${product[i].name}</h4>
-                                    <p class="product-price">Price: $ ${product[i].price}</p>
+                                    <h4 class="product-name">${products[i].name}</h4>
+                                    <p class="product-price">Price: $ ${products[i].price}</p>
                                 </div>`;
   }
 }
