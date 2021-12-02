@@ -17,11 +17,12 @@ export async function getProductApi() {
 }
 
 export function renderProducts(products) {
+  console.log(`products`, products);
   cardContainer.innerHTML = "";
 
   for (let i = 0; i < products.length; i++) {
     cardContainer.innerHTML += `<div class="product-card">
-                                  <a href="product-detail.html"
+                                  <a href="product-detail.html?id=${products[i].id}"
                                   <div class="image-container">
                                     <img class="image" src="${api}${products[i].image[0].url}" alt="${products[i].name}">
                                   </div>
