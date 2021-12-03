@@ -22,13 +22,15 @@ export function renderProducts(products) {
 
   for (let i = 0; i < products.length; i++) {
     cardContainer.innerHTML += `<div class="product-card">
-                                  <a href="product-detail.html?id=${products[i].id}"
-                                  <div class="image-container">
-                                    <img class="image" src="${api}${products[i].image[0].url}" alt="${products[i].name}">
-                                  </div>
-                                    <h4 class="product-name">${products[i].name}</h4>
-                                    <p class="product-price">Price: $ ${products[i].price}</p>
+                                    <div class="image-container">
+                                      <img class="image" src="${api}${products[i].image[0].url}" alt="${products[i].name}">
+                                    </div>
+                                    <a class="product-link" href="product-detail.html?id="${products[i].id}">
+                                      <h4 class="product-name">${products[i].name}</h4>
+                                      <p class="product-price">Price: $ ${products[i].price}</p>
                                     <a/>
-                                </div>`;
+                                </div>
+                                `;
+    console.log(`object`, products[i].id);
   }
 }

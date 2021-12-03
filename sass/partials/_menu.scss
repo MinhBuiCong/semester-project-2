@@ -3,6 +3,10 @@
   flex-direction: row;
   width: 100%;
   background-color: $secondary-color;
+  .nav-tabs .nav-link:focus,
+  .nav-tabs .nav-link:hover {
+    border: none;
+  }
   .nav {
     width: 100%;
     display: flex;
@@ -11,9 +15,15 @@
       text-decoration: none;
       color: $text-color;
       font-family: $font-secondary;
+      margin-bottom: 5px;
+    }
+    li > a:hover {
+      border: 1px solid inherit;
     }
     li > .dropdown-menu {
       background-color: $secondary-color;
+      width: 100%;
+      text-align: center;
     }
     li > .dropdown-item:hover {
       background-color: $hover-color;
@@ -33,9 +43,4 @@
   .link-4 {
     display: none;
   }
-  .dropdown {
-    margin: 0 auto;
-  }
-}
-@media screen and(max-width:505px ) {
 }
