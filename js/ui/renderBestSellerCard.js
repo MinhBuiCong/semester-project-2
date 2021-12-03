@@ -20,7 +20,7 @@ export function renderBestSellerCard(products) {
     productsContainer.innerHTML = `<div class="card">
                                             <a href="product-page.html">
                                                <div class="image-container">
-                                              <img class="image" src="${api}${products[0].image[0].url}" alt=""${products[0].product}>
+                                              <img class="image" src="${api}${products[0].image[0].url}" alt="${products[0].product}">
                                                 </div>
                                                <h4 class="product-name">${products[0].product}</h4>
                                                 <p class="product-price">Price: $ ${products[0].price}</p>
@@ -30,7 +30,7 @@ export function renderBestSellerCard(products) {
                                            <div class="card">
                                            <a href="product-page.html">
                                                <div class="image-container">
-                                              <img class="image" src="${api}${products[1].image[0].url}" alt=""${products[1].product}>
+                                              <img class="image" src="${api}${products[1].image[0].url}" alt="${products[1].product}">
                                                 </div>
                                                <h4 class="product-name">${products[1].product}</h4>
                                                 <p class="product-price">Price: $ ${products[1].price}</p>

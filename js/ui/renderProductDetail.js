@@ -20,5 +20,11 @@ export async function getProductDetail() {
 
 export function renderProductDetail(product) {
   console.log(`product`, product);
-  mainContainer.innerHTML = `<h1>${product[0].name}</h1>`;
+  mainContainer.innerHTML = `<h1>${product[0].name}</h1>
+                                <div class="image-detail-container">
+                                    <img class="image" src="${api}${product[0].image[0].url}" alt="${product[0].name}">
+                                </div>
+                                <div>
+                                    <p>Price: $ ${product[0].price}</p>
+                                </div>`;
 }
