@@ -1,7 +1,7 @@
-// import displayMessage from "./displayMessage.js";
-import { saveToken, saveUser } from "../storage/storage.js";
-import api from "../settings/api.js";
-import navbar from "../components/navbar.js";
+import { displayMessage } from "../js/components/displayMessage.js";
+import { saveToken, saveUser } from "./storage/storage.js";
+import { navbar } from "./components/navbar.js";
+import { api } from "./settings/api.js";
 
 navbar();
 

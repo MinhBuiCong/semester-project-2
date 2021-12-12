@@ -1,7 +1,7 @@
 import { getUsername } from "../storage/storage.js";
-// import logoutButton from "./logoutButton.js";
+import logoutButton from "./logOutButton.js";
 
-export default function navbar() {
+export function navbar() {
   const navbarContainer = document.querySelector(".navbar-content");
   const username = getUsername();
   const { pathname } = document.location;
@@ -45,4 +45,6 @@ export default function navbar() {
   </div>
 </div>
 </nav>`;
+
+  logoutButton();
 }
