@@ -1,9 +1,9 @@
-import displayMessage from "./common/displayMessage.js";
-import { saveToken, saveUser } from "../utils/storage.js";
-import { baseUrl } from "../settings/api.js";
-import createMenu from "./common/createMenu.js";
+// import displayMessage from "./displayMessage.js";
+import { saveToken, saveUser } from "../storage/storage.js";
+import api from "../settings/api.js";
+import navbar from "../components/navbar.js";
 
-createMenu();
+navbar();
 
 const form = document.querySelector("#contactForm");
 const message = document.querySelector(".message-container");
@@ -28,7 +28,7 @@ function submitForm(event) {
 }
 
 async function doLogin(username, password) {
-  const url = baseUrl + "auth/local";
+  const url = api + "/auth/local";
 
   const data = JSON.stringify({ identifier: username, password: password });
 
