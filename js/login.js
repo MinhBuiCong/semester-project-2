@@ -1,9 +1,11 @@
 import { displayMessage } from "../js/components/common/displayMessage.js";
 import { saveToken, saveUser } from "./storage/storage.js";
 import { navbar } from "./components/common/navbar.js";
+import { menu } from "./components/common/menu.js";
 import { api } from "./settings/api.js";
 
 navbar();
+menu();
 
 const form = document.querySelector("#contactForm");
 const message = document.querySelector(".message-container");
