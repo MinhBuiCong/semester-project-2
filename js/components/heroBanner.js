@@ -3,7 +3,7 @@ import { displayMessage } from "./displayMessage.js";
 
 const bannerContainer = document.querySelector(".main-content");
 
-const bannerUrl = api + "/" + "banners/";
+const bannerUrl = api + "/" + "banner/";
 
 export async function getBanner() {
   try {
