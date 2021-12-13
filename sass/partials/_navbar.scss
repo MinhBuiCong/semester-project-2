@@ -20,10 +20,23 @@
     color: $primary-color;
     font-size: $header-secondary;
   }
-  .navbar-top-wrapper > .navbar-icon-container > svg {
-    color: $text-color;
-    margin: 1rem 2rem;
+
+  .navbar-top-wrapper > .navbar-icon-container {
+    display: flex;
+    .nav-item {
+      list-style: none;
+    }
+    .nav-item > .nav-link {
+      color: $text-color;
+    }
+    .nav-item > #logout {
+      background-color: inherit;
+      border: none;
+      color: $cta-color;
+      padding: 10px 20px;
+    }
   }
+
   .search-container {
     width: 100%;
     margin: 0 auto 0.5rem auto;

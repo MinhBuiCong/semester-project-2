@@ -94,9 +94,25 @@ body {
   font-size: 32px;
 }
 
-.navbar-content .navbar-top-wrapper > .navbar-icon-container > svg {
+.navbar-content .navbar-top-wrapper > .navbar-icon-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar-content .navbar-top-wrapper > .navbar-icon-container .nav-item {
+  list-style: none;
+}
+
+.navbar-content .navbar-top-wrapper > .navbar-icon-container .nav-item > .nav-link {
   color: #fff;
-  margin: 1rem 2rem;
+}
+
+.navbar-content .navbar-top-wrapper > .navbar-icon-container .nav-item > #logout {
+  background-color: inherit;
+  border: none;
+  color: #fb5607;
+  padding: 10px 20px;
 }
 
 .navbar-content .search-container {
