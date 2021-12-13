@@ -45,3 +45,10 @@ body {
     }
   }
 }
+
+@media screen and (max-width: 600px) {
+  .content > .main-container > .main-content {
+    width: 100%;
+    margin: 0 0 1rem 0;
+  }
+}

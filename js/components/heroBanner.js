@@ -1,5 +1,5 @@
 import { api } from "../settings/api.js";
-import { displayMessage } from "./displayMessage.js";
+import { displayMessage } from "./common/displayMessage.js";
 
 const bannerContainer = document.querySelector(".main-content");
 

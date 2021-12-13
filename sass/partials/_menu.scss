@@ -3,6 +3,7 @@
   flex-direction: row;
   width: 100%;
   background-color: $secondary-color;
+
   .nav-tabs .nav-link:focus,
   .nav-tabs .nav-link:hover {
     border: none;
@@ -37,10 +38,17 @@
 }
 
 @media screen and(max-width:629px ) {
+  .menubar .nav li > a {
+    width: 100vw;
+    overflow: hidden;
+  }
   .link-1,
   .link-2,
   .link-3,
   .link-4 {
     display: none;
+  }
+  .nav {
+    text-align: center;
   }
 }

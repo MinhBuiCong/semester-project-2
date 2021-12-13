@@ -1,7 +1,7 @@
 import { api } from "../settings/api.js";
 import { searchProducts } from "../components/searchProducts.js";
-import { displayMessage } from "../components/displayMessage.js";
-import { breadcrumbContainer } from "../components/breadcrumbs.js";
+import { displayMessage } from "../components/common/displayMessage.js";
+import { breadcrumbContainer } from "../components/common/breadcrumbs.js";
 
 export const productsUrl = api + "/" + "products/";
 export const cardContainer = document.querySelector(".card-container");
@@ -29,14 +29,15 @@ export function renderProducts(products) {
 
   for (let i = 0; i < products.length; i++) {
     cardContainer.innerHTML += `<div class="product-card">
-                                    <div class="image-container">
-                                      <img class="image" src="${api}${products[i].image[0].url}" alt="${products[i].name}">
-                                    </div>
-                                    <a class="product-link" href="product-detail.html?id=${products[i].id}">
-                                      <h4 class="product-name">${products[i].name}</h4>
-                                      <p class="product-price">Price: $ ${products[i].price}</p>
-                                    <a/>
-                                </div>
-                                `;
+                                      <div class="image-container">
+                                        <img class="image" src="${api}${products[i].image[0].url}" alt="${products[i].name}">
+                                      </div>
+                                      <a class="product-link" href="product-detail.html?id=${products[i].id}">
+                                        <h4 class="product-name">${products[i].name}</h4>
+                                        <p class="product-price">Price: $ ${products[i].price}</p>
+                                      <a/>
+                                      <button class="add-to-cart">Add to cart</button>
+                                  </div>
+                                  `;
   }
 }

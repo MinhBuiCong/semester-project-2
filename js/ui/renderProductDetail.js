@@ -1,19 +1,18 @@
 import { api } from "../settings/api.js";
-import { displayMessage } from "../components/displayMessage.js";
-import { breadcrumbContainer } from "../components/breadcrumbs.js";
+import { displayMessage } from "../components/common/displayMessage.js";
+import { breadcrumbContainer } from "../components/common/breadcrumbs.js";
 
 const queryString = document.location.search;
-console.log(`object`, document.location.search);
 const params = new URLSearchParams(queryString);
-console.log(`params`, params);
 const id = params.get("id");
 const productDetail = api + "/products?id=" + id;
 const mainContainer = document.querySelector(".main-container");
+const productInfo = document.querySelector(".product-info");
+const carouselSliderContent = document.querySelector(".carousel-slider");
 
 export async function getProductDetail() {
   try {
     const response = await fetch(productDetail);
-    console.log(`response`, response);
     const product = await response.json();
     renderProductDetail(product);
   } catch (error) {
@@ -30,10 +29,10 @@ export function renderProductDetail(product) {
                                     </ol>
                                   </nav>`;
 
-  mainContainer.innerHTML = `<h1>${product[0].name}</h1>
-                                <div class="image-detail-container">
-                                    <img class="image" src="${api}${product[0].image[0].url}" alt="${product[0].name}">
-                                </div>
+  productInfo.innerHTML = `<h1>${product[0].name}</h1>
+                              <div class="image-detail-container">
+                              <img class="image" src="${api}${product[0].image[0].url}" alt="${product[0].name}">
+                              </div> 
                                 <div>
                                     <p>Price: $ ${product[0].price}</p>
                                 </div>

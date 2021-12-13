@@ -1,5 +1,5 @@
-import { getUsername } from "../storage/storage.js";
-import logoutButton from "./logOutButton.js";
+import { getUsername } from "../../storage/storage.js";
+import logoutButton from "../logOutButton.js";
 
 export function navbar() {
   const navbarContainer = document.querySelector(".navbar-content");
@@ -34,20 +34,8 @@ export function navbar() {
 <li class="nav-item"><a class="nav-link" href="shopping-cart.html">shopping cart</a> </li>   
 </div>
   </div>
-  <div class="search-container">
-    <input type="search" placeholder="Search for products">
-    <button>Search</button>
-  </div>
 </div>
 </nav>`;
 
   logoutButton();
-}
-
-{
-  /* <li class="nav-item">
-<a class="nav-link ${
-  pathname === "index.html" ? "active" : ""
-}" aria-current="page" href="index.html">Home</a>
-</li> */
 }

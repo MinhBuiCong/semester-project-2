@@ -4,7 +4,7 @@ export function menu() {
   menubarContainer.innerHTML = `
   <ul class="nav nav-tabs">
   <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">All products</a>
+    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">All products</a>
     <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="./product-page.html">Mobile</a></li>
       <li><a class="dropdown-item" href="./product-page.html">Consoles</a></li>
