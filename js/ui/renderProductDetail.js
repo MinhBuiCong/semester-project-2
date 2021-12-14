@@ -21,31 +21,6 @@ export async function getProductDetail() {
 }
 
 export function renderProductDetail(products) {
-  products.forEach((product) => {
-    console.log(`images`, product.image[0].url);
-
-    carousel.innerHTML = `
-                                <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                <img class="d-block w-100" src="${api}${product.image[0].url}" alt="First slide">
-                              </div>
-                              <div class="carousel-item active">
-                          <img class="d-block w-100" src="${api}${product.image[1].url}" alt="First slide">
-                        </div>
-                        <div class="carousel-item active">
-                          <img class="d-block w-100" src="${api}${product.image[2].url}" alt="First slide">
-                        </div>
-                                </div>
-                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                  <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                  <span class="sr-only">Next</span>
-                                </a>
-                              `;
-  });
   breadcrumbContainer.innerHTML = `<nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                       <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -53,4 +28,13 @@ export function renderProductDetail(products) {
                                       <li class="breadcrumb-item breadcrumb-product-detail active" aria-current="page">Product detail</li>
                                     </ol>
                                   </nav>`;
+  productInfo.innerHTML = `<h1 class="title">${products[0].name}</h1>
+                          <img class="main-image"src="${api}${products[0].image[0].url}" alt="image">
+                          <div class="image-container">
+                          <img class="small-image"src="${api}${products[0].image[1].url}" alt="image">
+                          <img class="small-image"src="${api}${products[0].image[2].url}" alt="image">  
+                          </div>
+                          <p class="price">Price: $${products[0].price}</p>
+                          <p class="description">lorem ipsum</p>
+                          <button>Add to cart</button>`;
 }

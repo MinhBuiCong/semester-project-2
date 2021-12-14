@@ -529,6 +529,26 @@ body {
   margin: 2rem;
 }
 
+.product-info .main-image {
+  width: 500px;
+  margin-bottom: 1rem;
+}
+
+.product-info .image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.product-info .image-container .small-image {
+  width: auto;
+  height: 120px;
+  border: 1px solid black;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
 .image-detail-container {
   width: 500px;
   height: auto;
