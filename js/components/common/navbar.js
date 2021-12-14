@@ -31,7 +31,8 @@ export function navbar() {
     </div>
     <div class="navbar-icon-container">
   ${authLink}
-<li class="nav-item"><a class="nav-link" href="shopping-cart.html">shopping cart</a> </li>   
+<li class="nav-item""><a class="nav-link" href="shopping-cart.html">shopping cart <span id="counter"></span></a> </li>   
+
 </div>
   </div>
 </div>

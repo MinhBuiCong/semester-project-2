@@ -1,5 +1,6 @@
 import { api } from "../settings/api.js";
 import { displayMessage } from "../components/common/displayMessage.js";
+import { addToCart, updateCartCount } from "../components/common/addToCart.js";
 
 export const bestSellerUrl = api + "/" + "best-sellers/";
 export const productsContainer = document.querySelector(".container-2");
@@ -14,28 +15,22 @@ export async function getBestSellerApi() {
   }
 }
 
+window.addToCart = addToCart;
+
 export function renderBestSellerCard(products) {
   productsContainer.innerHTML = "";
   for (let i = 0; i < products.length; i++) {
-    productsContainer.innerHTML = `<div class="card">
+    productsContainer.innerHTML += `<div class="card">
                                             <a href="product-detail.html?id=2">
                                                <div class="image-container">
-                                              <img class="image" src="${api}${products[0].image[0].url}" alt="${products[0].product}">
+                                              <img class="image" src="${api}${products[i].image[i].url}" alt="${products[i].name}">
                                                 </div>
-                                               <h4 class="product-name">${products[0].product}</h4>
-                                                <p class="product-price">Price: $ ${products[0].price}</p>
+                                               <h4 class="product-name">${products[i].name}</h4>
+                                                <p class="product-price">Price: $ ${products[i].price}</p>
                                                 </a>
-                                                <button class="add-to-cart">Add to cart</button>
+                                                <button class="add-to-cart" onclick='addToCart(${products[i].id})'>Add to cart</button>
                                             </div>
-                                           <div class="card">
-                                           <a href="product-detail.html?id=1">
-                                               <div class="image-container">
-                                              <img class="image" src="${api}${products[1].image[0].url}" alt="${products[1].product}">
-                                                </div>
-                                               <h4 class="product-name">${products[1].product}</h4>
-                                                <p class="product-price">Price: $ ${products[1].price}</p>
-                                                </a>
-                                                <button class="add-to-cart">Add to cart</button>
-                                            </div>`;
+                                        `;
   }
+  updateCartCount();
 }

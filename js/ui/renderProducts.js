@@ -2,6 +2,7 @@ import { api } from "../settings/api.js";
 import { searchProducts } from "../components/searchProducts.js";
 import { displayMessage } from "../components/common/displayMessage.js";
 import { breadcrumbContainer } from "../components/common/breadcrumbs.js";
+import { addToCart, updateCartCount } from "../components/common/addToCart.js";
 
 export const productsUrl = api + "/" + "products/";
 export const cardContainer = document.querySelector(".card-container");
@@ -10,12 +11,19 @@ export async function getProductApi() {
   try {
     const response = await fetch(productsUrl);
     const products = await response.json();
+    console.log(`products`, products);
+    window.map = {};
+    products.forEach((product) => {
+      map[product.id] = product;
+    });
     renderProducts(products);
     searchProducts(products);
   } catch (error) {
     displayMessage(error, "page not found", ".card-container");
   }
 }
+
+window.addToCart = addToCart;
 
 export function renderProducts(products) {
   const breadcrumbProduct = document.querySelector(".active");
@@ -36,8 +44,9 @@ export function renderProducts(products) {
                                         <h4 class="product-name">${products[i].name}</h4>
                                         <p class="product-price">Price: $ ${products[i].price}</p>
                                       <a/>
-                                      <button class="add-to-cart">Add to cart</button>
+                                      <button class="add-to-cart" onclick='addToCart(${products[i].id})'>Add to cart</button>
                                   </div>
                                   `;
   }
+  updateCartCount();
 }

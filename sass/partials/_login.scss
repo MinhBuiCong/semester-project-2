@@ -1,0 +1,41 @@
+.main-content {
+  border: 1px solid black;
+  margin: 2rem auto;
+  .login-title {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 2rem;
+  }
+  #contactForm {
+    display: flex;
+    flex-direction: column;
+    .message-container {
+      text-align: center;
+      color: red;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+    .input-content {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      margin: 1rem auto 1rem auto;
+      label {
+        margin-bottom: 0.5rem;
+        text-transform: capitalize;
+      }
+      input {
+        padding: 0.5rem;
+      }
+    }
+    #submit {
+      width: 80%;
+      text-transform: uppercase;
+      padding: 0.5rem;
+      border: none;
+      background-color: $cta-color;
+      margin: 2rem auto;
+    }
+  }
+}

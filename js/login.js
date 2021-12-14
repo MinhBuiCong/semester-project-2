@@ -3,9 +3,11 @@ import { saveToken, saveUser } from "./storage/storage.js";
 import { navbar } from "./components/common/navbar.js";
 import { menu } from "./components/common/menu.js";
 import { api } from "./settings/api.js";
+import { footer } from "./components/common/footer.js";
 
 navbar();
 menu();
+footer();
 
 const form = document.querySelector("#contactForm");
 const message = document.querySelector(".message-container");
