@@ -78,3 +78,24 @@
     }
   }
 }
+@media screen and(max-width: 550px) {
+  .main-container > .product-info {
+    .column-one {
+      .product-title {
+        font-size: $mobile-header-text;
+      }
+      .main-image {
+        width: 400px;
+        margin: 0 auto 3rem auto;
+      }
+    }
+    .column-two {
+      .description {
+        font-size: $mobile-text;
+      }
+      .add-to-cart {
+        font-size: $mobile-text;
+      }
+    }
+  }
+}
