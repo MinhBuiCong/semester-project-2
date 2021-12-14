@@ -23,29 +23,31 @@
     <title>Login</title>
   </head>
   <body>
-    <nav class="navbar-content"></nav>
-    <main class="content">
-      <div class="menubar"></div>
-      <div class="menu-container"></div>
-      <h1>login</h1>
-      <form id="contactForm">
-        <div class="message-container"></div>
-        <div>
-          <label for="username">Username </label>
-          <input id="username" placeholder="Username" />
-        </div>
-        <div>
-          <label for="password">Password </label>
-          <input
-            type="password"
-            id="password"
-            placeholder="Password"
-            autocomplete="on"
-          />
-        </div>
-        <button id="submit">Submit</button>
-      </form>
-    </main>
+    <div class="wrapper">
+      <nav class="navbar-content"></nav>
+      <main class="content">
+        <div class="menubar"></div>
+        <div class="menu-container"></div>
+        <h1>login</h1>
+        <form id="contactForm">
+          <div class="message-container"></div>
+          <div>
+            <label for="username">Username </label>
+            <input id="username" placeholder="Username" />
+          </div>
+          <div>
+            <label for="password">Password </label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              autocomplete="on"
+            />
+          </div>
+          <button id="submit">Submit</button>
+        </form>
+      </main>
+    </div>
     <script src="./js/login.js" type="module"></script>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

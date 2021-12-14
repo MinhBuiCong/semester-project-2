@@ -28,9 +28,14 @@ export function renderProductDetail(products) {
                                       <li class="breadcrumb-item breadcrumb-product-detail active" aria-current="page">Product detail</li>
                                     </ol>
                                   </nav>`;
-  productInfo.innerHTML = `<h1 class="title">${products[0].name}</h1>
-                          <img class="main-image"src="${api}${products[0].image[0].url}" alt="image">
+  productInfo.innerHTML = `<div class="column-one">
+                            <h1 class="product-title">${products[0].name}</h1>
+                            <img class="main-image"src="${api}${products[0].image[0].url}" alt="image">
+                          </div>
+                          <div class="column-two">
                           <p class="price">Price: $${products[0].price}</p>
-                          <p class="description">lorem ipsum</p>
-                          <button>Add to cart</button>`;
+                          <p class="description">${products[0].description}</p>
+                          <button class="add-to-cart">Add to cart</button>
+                          </div>
+                          `;
 }

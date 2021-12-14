@@ -9,6 +9,10 @@ body {
   background-color: $secondary-color;
 }
 
+.wrapper {
+  position: relative;
+  min-height: 100vh;
+}
 .content {
   margin: 0 auto;
   max-width: 1140px;

@@ -1,40 +1,80 @@
-.product-info {
+.main-container > .product-info {
   display: flex;
-  flex-direction: column;
-  .title {
-    text-align: center;
-    text-transform: uppercase;
-    margin: 2rem;
-  }
-  .main-image {
-    width: 500px;
-    margin-bottom: 1rem;
-  }
-  .image-container {
-    display: flex;
-    width: 100%;
-    button {
-      background-color: inherit;
-      border: none;
-      .small-image {
-        width: auto;
-        height: 120px;
-        border: 1px solid black;
-        cursor: pointer;
-        margin-right: 1rem;
-      }
+  flex-direction: row;
+  padding-bottom: 2rem;
+  .column-one {
+    .product-title {
+      text-transform: uppercase;
+      margin: 2rem 0 2rem 2rem;
     }
-    button:hover .small-image {
-      border-color: orange;
+    .main-image {
+      width: 400px;
+      margin: 0 2rem;
+    }
+  }
+  .column-two {
+    margin-top: 8rem;
+    .price {
+      font-weight: bold;
+    }
+    .description {
+      width: 80%;
+      margin-bottom: 5rem;
+    }
+    .add-to-cart {
+      background-color: $cta-color;
+      border: none;
+      text-transform: uppercase;
+      padding: 0.5rem;
+      width: 30%;
+    }
+    .add-to-cart:hover {
+      opacity: 0.5;
     }
   }
 }
 
-.image-detail-container {
-  width: 500px;
-  height: auto;
-  .image {
+@media screen and(max-width: 1040px) {
+  .main-container > .product-info {
+    flex-direction: column;
     width: 100%;
-    height: auto;
+    .column-one {
+      margin: 0 auto;
+      .product-title {
+        text-align: center;
+        text-transform: uppercase;
+        margin: 2rem;
+      }
+      .main-image {
+        width: 500px;
+        margin: 0 auto 5rem auto;
+      }
+    }
+    .column-two {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+
+      .price {
+        font-weight: bold;
+        text-align: center;
+      }
+      .description {
+        text-align: center;
+        width: 80%;
+        margin: 0 auto 5rem auto;
+      }
+      .add-to-cart {
+        background-color: $cta-color;
+        border: none;
+        text-transform: uppercase;
+        padding: 0.5rem;
+        width: 30%;
+        margin: 0 auto;
+      }
+      .add-to-cart:hover {
+        opacity: 0.5;
+      }
+    }
   }
 }
