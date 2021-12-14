@@ -30,10 +30,6 @@ export function renderProductDetail(products) {
                                   </nav>`;
   productInfo.innerHTML = `<h1 class="title">${products[0].name}</h1>
                           <img class="main-image"src="${api}${products[0].image[0].url}" alt="image">
-                          <div class="image-container">
-                          <img class="small-image"src="${api}${products[0].image[1].url}" alt="image">
-                          <img class="small-image"src="${api}${products[0].image[2].url}" alt="image">  
-                          </div>
                           <p class="price">Price: $${products[0].price}</p>
                           <p class="description">lorem ipsum</p>
                           <button>Add to cart</button>`;

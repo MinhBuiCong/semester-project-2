@@ -541,12 +541,21 @@ body {
   width: 100%;
 }
 
-.product-info .image-container .small-image {
+.product-info .image-container button {
+  background-color: inherit;
+  border: none;
+}
+
+.product-info .image-container button .small-image {
   width: auto;
   height: 120px;
   border: 1px solid black;
   cursor: pointer;
   margin-right: 1rem;
+}
+
+.product-info .image-container button:hover .small-image {
+  border-color: orange;
 }
 
 .image-detail-container {

@@ -13,13 +13,19 @@
   .image-container {
     display: flex;
     width: 100%;
-
-    .small-image {
-      width: auto;
-      height: 120px;
-      border: 1px solid black;
-      cursor: pointer;
-      margin-right: 1rem;
+    button {
+      background-color: inherit;
+      border: none;
+      .small-image {
+        width: auto;
+        height: 120px;
+        border: 1px solid black;
+        cursor: pointer;
+        margin-right: 1rem;
+      }
+    }
+    button:hover .small-image {
+      border-color: orange;
     }
   }
 }
