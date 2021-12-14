@@ -22,7 +22,7 @@ body {
     align-items: center;
     margin-bottom: 4rem;
     .main-content {
-      background-size: 100%;
+      background-size: 100% 100%;
       background-position: center;
       background-repeat: no-repeat;
       width: 97%;
@@ -51,5 +51,11 @@ body {
   .content > .main-container > .main-content {
     width: 100%;
     margin: 0 0 1rem 0;
+    h1 {
+      font-size: $mobile-header-text;
+    }
+    h2 {
+      font-size: $mobile-secondary-text;
+    }
   }
 }

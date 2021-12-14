@@ -8,7 +8,7 @@ const id = params.get("id");
 const productDetail = api + "/products?id=" + id;
 const mainContainer = document.querySelector(".main-container");
 const productInfo = document.querySelector(".product-info");
-const carouselSliderContent = document.querySelector(".carousel-slider");
+const carousel = document.querySelector(".carousel");
 
 export async function getProductDetail() {
   try {
@@ -20,7 +20,32 @@ export async function getProductDetail() {
   }
 }
 
-export function renderProductDetail(product) {
+export function renderProductDetail(products) {
+  products.forEach((product) => {
+    console.log(`images`, product.image[0].url);
+
+    carousel.innerHTML = `
+                                <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                <img class="d-block w-100" src="${api}${product.image[0].url}" alt="First slide">
+                              </div>
+                              <div class="carousel-item active">
+                          <img class="d-block w-100" src="${api}${product.image[1].url}" alt="First slide">
+                        </div>
+                        <div class="carousel-item active">
+                          <img class="d-block w-100" src="${api}${product.image[2].url}" alt="First slide">
+                        </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="sr-only">Next</span>
+                                </a>
+                              `;
+  });
   breadcrumbContainer.innerHTML = `<nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                       <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -28,13 +53,4 @@ export function renderProductDetail(product) {
                                       <li class="breadcrumb-item breadcrumb-product-detail active" aria-current="page">Product detail</li>
                                     </ol>
                                   </nav>`;
-
-  productInfo.innerHTML = `<h1>${product[0].name}</h1>
-                              <div class="image-detail-container">
-                              <img class="image" src="${api}${product[0].image[0].url}" alt="${product[0].name}">
-                              </div> 
-                                <div>
-                                    <p>Price: $ ${product[0].price}</p>
-                                </div>
-                                <button>Add to Cart</button`;
 }

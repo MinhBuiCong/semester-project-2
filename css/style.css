@@ -35,7 +35,7 @@ body {
 }
 
 .content .main-container .main-content {
-  background-size: 100%;
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
   width: 97%;
@@ -65,6 +65,12 @@ body {
   .content > .main-container > .main-content {
     width: 100%;
     margin: 0 0 1rem 0;
+  }
+  .content > .main-container > .main-content h1 {
+    font-size: 28px;
+  }
+  .content > .main-container > .main-content h2 {
+    font-size: 24px;
   }
 }
 
@@ -322,7 +328,7 @@ body {
     height: 200px;
   }
   .products-container .card > a > .image-container .image {
-    height: 80%;
+    height: 100%;
   }
   .products-container .product-name {
     margin-bottom: 5px;
@@ -447,11 +453,26 @@ body {
     width: 240px;
     height: 240px;
   }
+  .card-container .product-card .product-link > .product-name {
+    font-size: 24px;
+  }
 }
 
-@media screen and (max-width: 920px) {
-  .card-container .product-card {
-    margin: 4rem 1rem;
+@media screen and (max-width: 991px) {
+  .main-container {
+    width: 100vw;
+  }
+  .main-container .card-container {
+    margin: 0;
+    width: 100%;
+    gap: 0 1rem;
+  }
+  .main-container .card-container .product-card {
+    width: 300px;
+  }
+  .main-container .card-container .product-card .image-container {
+    width: 300px;
+    height: 300px;
   }
 }
 
@@ -467,8 +488,45 @@ body {
   }
   .card-container .product-card .image-container {
     width: 400px;
-    height: 400px;
+    height: auto;
   }
+}
+
+@media screen and (max-width: 728px) {
+  .product-page-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .product-page-top .product-header {
+    margin: 1rem auto;
+  }
+  .product-page-top .search-product {
+    margin: 0 auto;
+  }
+  .product-page-top .search-product .search {
+    padding: 1rem;
+  }
+}
+
+.product-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.product-info .title {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 2rem;
 }
 
 .image-detail-container {
@@ -549,6 +607,7 @@ body {
   }
   .footer-wrapper .footer-section {
     margin: 2rem auto;
+    width: 80%;
   }
 }
 /*# sourceMappingURL=style.css.map */
