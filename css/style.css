@@ -246,9 +246,14 @@ body {
   text-decoration: underline;
 }
 
+body {
+  background-color: black;
+}
+
 .main-content {
   border: 1px solid black;
   margin: 2rem auto;
+  max-width: 1140px;
 }
 
 .main-content .login-title {
@@ -267,7 +272,7 @@ body {
           flex-direction: column;
 }
 
-.main-content #contactForm .message-container {
+.main-content #contactForm #message-container {
   text-align: center;
   color: red;
   text-transform: uppercase;
