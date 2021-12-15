@@ -1,19 +1,5 @@
 let key = "shoppingCart";
 
-export function updateCartCount() {
-  let cart = JSON.parse(localStorage.getItem(key));
-
-  if (!cart) return;
-
-  let totalCount = 0;
-  Object.keys(cart).forEach((id) => (totalCount += cart[id].count));
-  document.getElementById("counter").innerHTML = `(${totalCount})`;
-}
-
-export function getCart() {
-  return JSON.parse(localStorage.getItem(key));
-}
-
 export function addToCart(id) {
   console.log(`id`, id);
   let cart = getCart();
@@ -31,9 +17,21 @@ export function addToCart(id) {
     };
   }
 
-  updateCartCount();
-
   localStorage.setItem(key, JSON.stringify(cart));
+  updateCartCount();
+}
+export function updateCartCount() {
+  let cart = JSON.parse(localStorage.getItem(key));
+
+  if (!cart) return;
+
+  let totalCount = 0;
+  Object.keys(cart).forEach((id) => (totalCount += cart[id].count));
+  document.getElementById("counter").innerHTML = `(${totalCount})`;
+}
+
+export function getCart() {
+  return JSON.parse(localStorage.getItem(key));
 }
 
 export function removeFromCart(id) {

@@ -722,6 +722,15 @@ body {
   padding: 0 1rem;
   border-left: 1px solid black;
   width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .main-container > .cart-container .cart-item .section-1 .cart-product-image {
@@ -733,16 +742,35 @@ body {
   padding: 0 1rem;
   border-left: 1px solid black;
   width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .main-container > .cart-container .cart-item .section-2 .cart-item-name {
   text-transform: uppercase;
+  text-align: center;
 }
 
 .main-container > .cart-container .cart-item .section-3 {
   padding: 0 1rem;
   border-left: 1px solid black;
   width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .main-container > .cart-container .cart-item .section-3 .cart-item-count {
@@ -753,6 +781,15 @@ body {
   padding: 0 1rem;
   border-left: 1px solid black;
   width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .main-container > .cart-container .cart-item .section-4 .cart-item-price {
@@ -763,6 +800,15 @@ body {
   padding: 0 1rem;
   border-left: 1px solid black;
   width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .main-container > .cart-container .cart-item .section-5 .cart-item-remove {

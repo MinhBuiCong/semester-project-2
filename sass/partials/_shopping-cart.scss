@@ -13,6 +13,9 @@
       padding: 0 1rem;
       border-left: 1px solid black;
       width: 30%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       .cart-product-image {
         width: 200px;
         height: 200px;
@@ -22,14 +25,21 @@
       padding: 0 1rem;
       border-left: 1px solid black;
       width: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       .cart-item-name {
         text-transform: uppercase;
+        text-align: center;
       }
     }
     .section-3 {
       padding: 0 1rem;
       border-left: 1px solid black;
       width: 10%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       .cart-item-count {
         width: 50px;
       }
@@ -38,6 +48,9 @@
       padding: 0 1rem;
       border-left: 1px solid black;
       width: 10%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       .cart-item-price {
         text-transform: uppercase;
       }
@@ -46,6 +59,9 @@
       padding: 0 1rem;
       border-left: 1px solid black;
       width: 10%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       .cart-item-remove {
         text-transform: uppercase;
         border: none;
