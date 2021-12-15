@@ -1,13 +1,13 @@
 import { api } from "../settings/api.js";
 import { displayMessage } from "../components/common/displayMessage.js";
 import { addToCart, updateCartCount } from "../components/common/addToCart.js";
+import { productsUrl } from "./renderProducts.js";
 
-export const bestOfferUrl = api + "/" + "best-offers/";
 export const productsContainer = document.querySelector(".container-1");
 
 export async function getBestOfferApi() {
   try {
-    const response = await fetch(bestOfferUrl);
+    const response = await fetch(productsUrl);
     const products = await response.json();
     window.map = {};
     products.forEach((product) => {
@@ -24,11 +24,13 @@ window.addToCart = addToCart;
 export function renderBestOfferCard(products) {
   productsContainer.innerHTML = "";
   for (let i = 0; i < products.length; i++) {
-    console.log(`products`, products[i].id);
+    if (products[i].type !== "FEATURED_OFFER") {
+      continue;
+    }
     productsContainer.innerHTML += `<div class="card">
-                                      <a href="product-detail.html?id=4">
+                                      <a href="product-detail.html?id=${products[i].id}">
                                         <div class="image-container">
-                                          <img class="image" src="${api}${products[i].image[i].url}" alt=""${products[i].name}>
+                                          <img class="image" src="${api}${products[i].image[0].url}" alt=""${products[i].name}>
                                         </div>
                                           <h4 class="product-name">${products[i].name}</h4>
                                           <p class="product-price">Price: $ ${products[i].price}</p>

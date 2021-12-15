@@ -16,9 +16,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
       .cart-product-image {
         width: 200px;
-        height: 200px;
+        height: auto;
       }
     }
     .section-2 {
@@ -31,6 +32,7 @@
       .cart-item-name {
         text-transform: uppercase;
         text-align: center;
+        margin: 0;
       }
     }
     .section-3 {
@@ -42,6 +44,7 @@
       align-items: center;
       .cart-item-count {
         width: 50px;
+        text-align: center;
       }
     }
     .section-4 {
@@ -53,6 +56,7 @@
       align-items: center;
       .cart-item-price {
         text-transform: uppercase;
+        margin: 0;
       }
     }
     .section-5 {

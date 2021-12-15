@@ -17,7 +17,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Product page</title>
+    <title>Edit</title>
   </head>
   <body>
     <div class="wrapper">
@@ -26,24 +26,34 @@
         <div class="menubar"></div>
         <div class="breadcrumbs"></div>
         <div class="main-container">
-          <div class="product-page-top">
-            <h1 class="product-header">All Products</h1>
-            <div class="search-product">
-              <input
-                class="search"
-                type="search"
-                placeholder="Search for products"
-              />
-              <button class="search-button">Search</button>
-            </div>
-          </div>
-          <div class="container card-container"></div>
-          <div class="edit-container"></div>
+          <h1>Edit page</h1>
+          <form id="editForm" onsubmit="submitProduct(); return false">
+              <div>
+                <label for="name">Name</label>
+                <input class="form-control"id="name" type="text" placeholder="name" required value="test"/>
+              </div>
+              <div>
+                <label for="price">Price</label>
+                <input class="form-control"id="price"type="number" placeholder="price" required value=99 />
+              </div>
+              <div>
+                <label for="description">Description</label>
+                <input class="form-control"id="description"type="text" placeholder="description" required value="testtest"/>
+              </div>
+              <div>
+                <input id="feature"type="checkbox"/>Featured
+              </div>
+              <div>
+                <label for="image">Image</label>
+                <input class="form-control" id="image"type="file" >
+              </div>     
+              <button class="btn btn-primary"type="submit" >submit</button>
+          </form>
         </div>
       </main>
     </div>
     <footer class="footer"></footer>
-    <script src="/js/product-page.js" type="module"></script>
+    <script src="/js/edit.js" type="module"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
       integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"

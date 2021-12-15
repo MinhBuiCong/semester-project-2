@@ -1,6 +1,7 @@
 import { api } from "../settings/api.js";
 import { displayMessage } from "../components/common/displayMessage.js";
 import { breadcrumbContainer } from "../components/common/breadcrumbs.js";
+import { addToCart, updateCartCount } from "../components/common/addToCart.js";
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -8,17 +9,22 @@ const id = params.get("id");
 const productDetail = api + "/products?id=" + id;
 const mainContainer = document.querySelector(".main-container");
 const productInfo = document.querySelector(".product-info");
-const carousel = document.querySelector(".carousel");
 
 export async function getProductDetail() {
   try {
     const response = await fetch(productDetail);
     const product = await response.json();
+    window.map = {};
+    product.forEach((product) => {
+      map[product.id] = product;
+    });
     renderProductDetail(product);
   } catch (error) {
     displayMessage(error, "page not found", ".main-container");
   }
 }
+
+window.addToCart = addToCart;
 
 export function renderProductDetail(products) {
   breadcrumbContainer.innerHTML = `<nav aria-label="breadcrumb">
@@ -35,7 +41,8 @@ export function renderProductDetail(products) {
                           <div class="column-two">
                           <p class="price">Price: $${products[0].price}</p>
                           <p class="description">${products[0].description}</p>
-                          <button class="add-to-cart">Add to cart</button>
+                          <button class="add-to-cart" onclick='addToCart(${products[0].id})'>Add to cart</button>
                           </div>
                           `;
+  updateCartCount();
 }
