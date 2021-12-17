@@ -22,6 +22,7 @@ export async function getBestOfferApi() {
 window.addToCart = addToCart;
 
 export function renderBestOfferCard(products) {
+  console.log(`products`, products)
   productsContainer.innerHTML = "";
   for (let i = 0; i < products.length; i++) {
     if (products[i].type !== "FEATURED_OFFER") {
@@ -30,7 +31,7 @@ export function renderBestOfferCard(products) {
     productsContainer.innerHTML += `<div class="card">
                                       <a href="product-detail.html?id=${products[i].id}">
                                         <div class="image-container">
-                                          <img class="image" src="${api}${products[i].image[0].url}" alt=""${products[i].name}>
+                                          <img class="image" src="${products[i].image[0].url}" alt=""${products[i].name}>
                                         </div>
                                           <h4 class="product-name">${products[i].name}</h4>
                                           <p class="product-price">Price: $ ${products[i].price}</p>
