@@ -2,10 +2,12 @@ import { api } from "../settings/api.js";
 import { searchProducts } from "../components/searchProducts.js";
 import { displayMessage } from "../components/common/displayMessage.js";
 import { breadcrumbContainer } from "../components/common/breadcrumbs.js";
-import { addToCart, updateCartCount } from "../components/common/addToCart.js";
+import { addToCart, updateCartCount, deleteProduct } from "../components/common/addToCart.js";
+import { getUsername } from "../storage/storage.js";
 
 export const productsUrl = api + "/" + "products/";
 export const cardContainer = document.querySelector(".card-container");
+
 
 export async function getProductApi() {
   try {
@@ -24,6 +26,7 @@ export async function getProductApi() {
 }
 
 window.addToCart = addToCart;
+window.deleteProduct = deleteProduct;
 
 export function renderProducts(products) {
   const breadcrumbProduct = document.querySelector(".active");
@@ -38,15 +41,24 @@ export function renderProducts(products) {
   for (let i = 0; i < products.length; i++) {
     cardContainer.innerHTML += `<div class="product-card">
                                       <div class="image-container">
-                                        <img class="image" src="${api}${products[i].image[0].url}" alt="${products[i].name}">
+                                        <img class="image" src="${api}${products[i].image[0].url}" >
                                       </div>
                                       <a class="product-link" href="product-detail.html?id=${products[i].id}">
                                         <h4 class="product-name">${products[i].name}</h4>
                                         <p class="product-price">Price: $ ${products[i].price}</p>
                                       <a/>
-                                      <button class="add-to-cart" onclick='addToCart(${products[i].id})'>Add to cart</button>
+                                      <div class="row btn-container">
+                                      <div class="text-center  ${getUsername() ? 'col-8' : 'col-12'}">
+                                      <button class="btn btn-primary" onclick='addToCart(${products[i].id})'>Add to cart</button>
+                                      </div>
+                                      <div class="text-center col-4 ${getUsername() ? '' : 'd-none'}">
+                                      <a href="add-page.html?id=${products[i].id}" class="btn btn-secondary">edit</a>
+                                      <button class="btn btn-danger" onclick='deleteProduct(${products[i].id})'>X</button>
+                                      </div>
+                                      </div>
                                   </div>
                                   `;
   }
   updateCartCount();
 }
+

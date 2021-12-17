@@ -1,3 +1,6 @@
+import {api} from "../../settings/api.js";
+import {getToken} from "../../storage/storage.js"
+
 let key = "shoppingCart";
 
 export function addToCart(id) {
@@ -39,4 +42,15 @@ export function removeFromCart(id) {
   delete cart[id];
   localStorage.setItem(key, JSON.stringify(cart));
   location.reload();
+}
+
+export async function deleteProduct(id){
+  let productDetail =  api + "/products/" + id;
+  const response = await fetch(productDetail, {
+    method: "DELETE",
+    headers: {
+      Authorization: `Bearer ${getToken()}`,
+    },
+  });
+ location.reload();
 }

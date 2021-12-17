@@ -32,10 +32,9 @@
 }
 
 .product-card {
-  border: 1px solid rgba(0, 0, 0, 0.164);
   width: 300px;
   margin: 2rem auto;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.055);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.185);
   .image-container {
     width: 300px;
     height: 400px;
@@ -51,6 +50,10 @@
     text-decoration: none;
     color: inherit;
     text-align: center;
+  }
+
+  .btn-container{
+   
   }
   .add-to-cart {
     background-color: $cta-color;

@@ -13,7 +13,7 @@ export function createCartContent() {
   breadcrumbContainer.innerHTML = `<nav aria-label="breadcrumb">
                                       <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                        <li class="breadcrumb-item"><a href="product.page.html">Products</a></li>
+                                        <li class="breadcrumb-item"><a href="product-page.html">Products</a></li>
                                         <li class="breadcrumb-item breadcrumb-product-page active">Shopping cart</li>
                                       </ol>
                                     </nav>`;
@@ -30,9 +30,11 @@ export function createCartContent() {
       }" alt="${item.product.name}"> 
                                                 </div>
                                                 <div class="section-2">
-                                                    <h3 class="cart-item-name">${
-                                                      item.product.name
-                                                    }</>
+                                                <a class="product-detail-link"href="product-detail.html?id=${item.product.id}">
+                                                <h3 class="cart-item-name">${
+                                                  item.product.name
+                                                }</h3>
+                                                </a>
                                                 </div>
                                                 <div class="section-3">
                                                     <div class="cart-item-count">${
@@ -56,5 +58,10 @@ export function createCartContent() {
       sum += item.product.price * item.count;
       total.innerHTML = `<p>SUM = $ ${sum}</p>`;
     });
+  } 
+  if(sum === 0){
+    cartContainer.innerHTML = `<p class="cart-empty">this cart is empty</p>`
+
   }
+  
 }
