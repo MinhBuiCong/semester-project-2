@@ -8,6 +8,6 @@ import { footer } from "./components/common/footer.js";
 navbar();
 menu();
 getBestOfferApi();
-// getBestSellerApi();
+getBestSellerApi();
 getBanner();
 footer();
