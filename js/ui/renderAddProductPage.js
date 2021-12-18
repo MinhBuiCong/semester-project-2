@@ -74,7 +74,7 @@ window.submitProduct = async function submitProduct(){
       feature: feature.value,
     };
 
-    if (! productId) {
+    if (!productId) {
       formData.append(`files.image`, image.files[0], image.files[0].id)
     }
 
@@ -84,6 +84,7 @@ window.submitProduct = async function submitProduct(){
  
     req.open(productId ? 'PUT':'POST', getProducts + '/' + productId);
     req.setRequestHeader('Authorization', `Bearer ${getToken()}`);
+    console.log(`req`, req)
     req.send(formData);
 
   
