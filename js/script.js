@@ -7,7 +7,7 @@ import { footer } from "./components/common/footer.js";
 
 navbar();
 menu();
-getBestOfferApi();
-getBestSellerApi();
+// getBestOfferApi();
+// getBestSellerApi();
 getBanner();
 footer();
