@@ -32,13 +32,13 @@ export async function renderAddPage(){
                       <div>
                         <label for="feature">Feature Type</label> 
                         <select class="form-control" id="feature">
-                          <option value="NONE" ${product.type === 'NONE' ? 'selected' : ''}>
+                          <option value="NONE" ${product.feature === 'NONE' ? 'selected' : ''}>
                             None
                           </option>
-                          <option value="FEATURED_OFFER" ${product.type === 'FEATURED_OFFER' ? 'selected' : ''}>
+                          <option value="FEATURED_OFFER" ${product.feature === 'FEATURED_OFFER' ? 'selected' : ''}>
                             Best Offer
                           </option>
-                          <option value="FEATURED_SELLER" ${product.type === 'FEATURED_SELLER' ? 'selected' : ''}>
+                          <option value="FEATURED_SELLER" ${product.feature === 'FEATURED_SELLER' ? 'selected' : ''}>
                             Best Seller
                           </option>
                         </select>
@@ -71,7 +71,7 @@ window.submitProduct = async function submitProduct(){
       name: name.value,
       price: price.value,
       description: description.value,
-      type: feature.value,
+      feature: feature.value,
     };
 
     if (! productId) {
@@ -87,7 +87,7 @@ window.submitProduct = async function submitProduct(){
     req.send(formData);
 
   
-    // location.href = "/product-page.html"
+    location.href = "/product-page.html"
 
     
 

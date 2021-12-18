@@ -3,15 +3,14 @@ import { displayMessage } from "./common/displayMessage.js";
 
 const bannerContainer = document.querySelector(".main-content");
 
-const bannerUrl = api + "/" + "banner/";
+const bannerUrl = api + "/" + "Banner/";
 
 export async function getBanner() {
   try {
     const response = await fetch(bannerUrl);
     const banner = await response.json();
-    console.log(`banner`, banner);
-    const bannerImg = banner.banner[0].url;
-    bannerContainer.style.backgroundImage = `url("${bannerImg}")`;
+    const bannerImg = banner.image[0].url;
+    bannerContainer.style.backgroundImage = `url("${api}${bannerImg}")`;
   } catch (error) {
     displayMessage(error, "404 - page not found", ".content");
   }

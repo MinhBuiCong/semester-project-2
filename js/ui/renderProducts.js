@@ -29,6 +29,7 @@ window.addToCart = addToCart;
 window.deleteProduct = deleteProduct;
 
 export function renderProducts(products) {
+  console.log(`products`, products)
   const breadcrumbProduct = document.querySelector(".active");
   cardContainer.innerHTML = "";
   breadcrumbContainer.innerHTML = `<nav aria-label="breadcrumb">
@@ -41,7 +42,7 @@ export function renderProducts(products) {
   for (let i = 0; i < products.length; i++) {
     cardContainer.innerHTML += `<div class="product-card">
                                       <div class="image-container">
-                                        <img class="image" src="${products[i].image[0].url}" >
+                                      <img class="image" src="${api}${products[i].image[0].url}" >
                                       </div>
                                       <a class="product-link" href="product-detail.html?id=${products[i].id}">
                                         <h4 class="product-name">${products[i].name}</h4>
@@ -61,4 +62,3 @@ export function renderProducts(products) {
   }
   updateCartCount();
 }
-
