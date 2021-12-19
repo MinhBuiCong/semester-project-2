@@ -45,6 +45,5 @@ export function navbar() {
                                   </div>
                                 </div>
                               </nav>`;
-
   logoutButton();
 }

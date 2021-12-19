@@ -4,13 +4,11 @@ import {getToken} from "../../storage/storage.js"
 let key = "shoppingCart";
 
 export function addToCart(id) {
-  console.log(`id`, id);
   let cart = getCart();
   if (!cart) {
     cart = {};
   }
   let product = map[id];
-  console.log(`product`, product);
   if (cart[id]) {
     cart[id].count++;
   } else {

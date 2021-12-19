@@ -13,7 +13,6 @@ export async function getProductApi() {
   try {
     const response = await fetch(productsUrl);
     const products = await response.json();
-    console.log(`products`, products);
     window.map = {};
     products.forEach((product) => {
       map[product.id] = product;
@@ -29,7 +28,6 @@ window.addToCart = addToCart;
 window.deleteProduct = deleteProduct;
 
 export function renderProducts(products) {
-  console.log(`products`, products)
   const breadcrumbProduct = document.querySelector(".active");
   cardContainer.innerHTML = "";
   breadcrumbContainer.innerHTML = `<nav aria-label="breadcrumb">

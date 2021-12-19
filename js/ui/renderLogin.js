@@ -17,8 +17,8 @@ export function renderLogin() {
                           placeholder="Password"
                           autocomplete="on"
                         />
-                    </div>
-                    <button id="submit">Submit</button>`;
+                  </div>
+                  <button id="submit">Submit</button>`;
 }
 
 form.addEventListener("submit", submitForm);

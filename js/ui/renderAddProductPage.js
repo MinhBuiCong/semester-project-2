@@ -18,17 +18,17 @@ export async function renderAddPage(){
   }
     form.innerHTML =`<input id="id" type="hidden" value="${product.id || ''}"/>
                       <div>
-                      <label for="name">Name</label>
-                      <input class="form-control"id="name" type="text" placeholder="title" value="${product.name || ''}" required />
-                        </div>
-                          <div>
+                        <label for="name">Name</label>
+                        <input class="form-control"id="name" type="text" placeholder="title" value="${product.name || ''}" required />
+                      </div>
+                      <div>
                         <label for="price">Price</label>
                         <input class="form-control"id="price"type="number" placeholder="price" value="${product.price || ''}" required />
-                        </div>
-                        <div>
-                       <label for="description">Description</label>
-                          <input class="form-control"id="description"type="text" placeholder="description" value="${product.description || ''}" required />
-                    </div>
+                      </div>
+                      <div>
+                        <label for="description">Description</label>
+                        <input class="form-control"id="description"type="text" placeholder="description" value="${product.description || ''}" required />
+                      </div>
                       <div>
                         <label for="feature">Feature Type</label> 
                         <select class="form-control" id="feature">
@@ -42,15 +42,14 @@ export async function renderAddPage(){
                             Best Seller
                           </option>
                         </select>
-                       </div>
-                         <div class="${product.id ? 'd-none' : ''}">
-                             <label for="image">Image</label>
-                          <input class="form-control" id="image"type="file" ${product.id ? '' : 'required'} >
-                          </div>
-                        <button class="btn btn-primary"type="submit" >
+                      </div>
+                      <div class="${product.id ? 'd-none' : ''}">
+                        <label for="image">Image</label>
+                        <input class="form-control" id="image"type="file" ${product.id ? '' : 'required'} >
+                      </div>
+                        <button class="btn btn-primary"type="submit">
                           ${product.id ? 'Update product' : 'Create product'}
-                        </button>
-                                `
+                        </button>`
 }
 
 
@@ -84,7 +83,6 @@ window.submitProduct = async function submitProduct(){
  
     req.open(productId ? 'PUT':'POST', getProducts + '/' + productId);
     req.setRequestHeader('Authorization', `Bearer ${getToken()}`);
-    console.log(`req`, req)
     req.send(formData);
 
   

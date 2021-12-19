@@ -22,7 +22,6 @@ export async function getBestOfferApi() {
 window.addToCart = addToCart;
 
 export function renderBestOfferCard(products) {
-  console.log(`products`, products)
   productsContainer.innerHTML = "";
   for (let i = 0; i < products.length; i++) {
     if (products[i].feature !== "FEATURED_OFFER") {
@@ -37,8 +36,7 @@ export function renderBestOfferCard(products) {
                                           <p class="product-price">Price: $ ${products[i].price}</p>
                                       </a>
                                       <button class="add-to-cart" onclick='addToCart(${products[i].id})'>Add to cart</button>
-                                    </div>
-                           `;
+                                    </div>`;
   }
   updateCartCount();
 }
