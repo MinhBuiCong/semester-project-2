@@ -1,1 +1,1 @@
-export const api = "https://strapi-api-semester-project.herokuapp.com";
+export const api = "https://obscure-peak-36368.herokuapp.com";

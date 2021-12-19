@@ -9,6 +9,7 @@ export async function getBestOfferApi() {
   try {
     const response = await fetch(productsUrl);
     const products = await response.json();
+    console.log(products)
     window.map = {};
     products.forEach((product) => {
       map[product.id] = product;
