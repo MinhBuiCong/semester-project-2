@@ -4,21 +4,21 @@ import { displayMessage } from "../components/common/displayMessage.js";
 const form = document.querySelector("#contactForm");
 
 export function renderLogin() {
-  form.innerHTML = ` <div id="message-container"></div>
-                            <div class="input-content">
-                                <label for="username">Username </label>
-                                <input id="username" placeholder="Username" />
-                            </div>
-                            <div class="input-content">
-                                <label for="password">Password </label>
-                                <input
-                                type="password"
-                                id="password"
-                                placeholder="Password"
-                                autocomplete="on"
-                                />
-                            </div>
-                            <button id="submit">Submit</button>`;
+  form.innerHTML =`<div id="message-container"></div>
+                    <div class="input-content">
+                      <label for="username">Username </label>
+                      <input id="username" placeholder="Username" />
+                    </div>
+                    <div class="input-content">
+                      <label for="password">Password </label>
+                        <input
+                          type="password"
+                          id="password"
+                          placeholder="Password"
+                          autocomplete="on"
+                        />
+                    </div>
+                    <button id="submit">Submit</button>`;
 }
 
 form.addEventListener("submit", submitForm);

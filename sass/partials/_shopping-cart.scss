@@ -16,7 +16,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-
       .cart-product-image {
         width: 200px;
         height: auto;
@@ -99,9 +98,7 @@
   text-decoration: none;
   color:inherit;
   text-align: center;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.185);
-
-  
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.185); 
 }
 .checkout:hover {
   opacity: 0.5;

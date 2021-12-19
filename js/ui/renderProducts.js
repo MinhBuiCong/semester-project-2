@@ -49,12 +49,12 @@ export function renderProducts(products) {
                                         <p class="product-price">Price: $ ${products[i].price}</p>
                                       <a/>
                                       <div class="btn-container">
-                                        <div class="add-to-cart ${getUsername()}">
-                                          <button class="btn-add-to-cart btn-primary" onclick='addToCart(${products[i].id})'>Add to cart</button>
+                                        <div class="text-center col-12 ${getUsername()}">
+                                          <button class="btn btn-primary" onclick='addToCart(${products[i].id})'>Add to cart</button>
                                         </div>
-                                        <div class="admin-btn-container ${getUsername()}">
-                                          <a href="add-page.html?id=${products[i].id}" class="btn btn-secondary">edit</a>
-                                          <button class="btn btn-danger " onclick='deleteProduct(${products[i].id})'>X</button>
+                                        <div class="text-center col-12 ${getUsername() ? '' : 'd-none'}">
+                                          <a class="btn btn-secondary" href="add-page.html?id=${products[i].id}">edit</a>
+                                          <button class="btn btn-danger" onclick='deleteProduct(${products[i].id})'>X</button>
                                         </div>
                                       </div>
                                   </div>

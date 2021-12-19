@@ -9,7 +9,6 @@
     flex-direction: column;
     padding: 0;
   }
-
   .navbar-top-wrapper {
     display: flex;
     justify-content: space-between;
@@ -20,7 +19,6 @@
     color: $primary-color;
     font-size: $header-secondary;
   }
-
   .navbar-top-wrapper > .navbar-icon-container {
     display: flex;
     .nav-item {
