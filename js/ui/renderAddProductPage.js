@@ -88,7 +88,7 @@ window.submitProduct = async function submitProduct(){
     req.send(formData);
 
   
-    location.href = "/product-page.html"
+    alert("product added/edited")
 
     
 

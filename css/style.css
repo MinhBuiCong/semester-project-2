@@ -511,10 +511,6 @@ body {
   width: 100%;
 }
 
-.product-card .btn-container a {
-  width: 100%;
-}
-
 .product-card .btn-container a .text-center {
   width: 100%;
   display: -webkit-box;
