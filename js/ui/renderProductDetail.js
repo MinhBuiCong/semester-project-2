@@ -36,7 +36,7 @@ export function renderProductDetail(products) {
                                   </nav>`;
   productInfo.innerHTML = `<div class="column-one">
                             <h1 class="product-title">${products[0].name}</h1>
-                            <img class="main-image"src="${api}${products[0].image[0].url}" alt="image">
+                            <img class="main-image"src="${products[0].image[0].url}" alt="${products[0].name}">
                           </div>
                           <div class="column-two">
                           <p class="price">Price: $${products[0].price}</p>

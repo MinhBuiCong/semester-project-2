@@ -42,7 +42,7 @@ export function renderProducts(products) {
   for (let i = 0; i < products.length; i++) {
     cardContainer.innerHTML += `<div class="product-card">
                                       <div class="image-container">
-                                      <img class="image" src="${api}${products[i].image[0].url}" >
+                                      <img class="image" src="${products[i].image[0].url}" alt="${products[i].name}" >
                                       </div>
                                       <a class="product-link" href="product-detail.html?id=${products[i].id}">
                                         <h4 class="product-name">${products[i].name}</h4>

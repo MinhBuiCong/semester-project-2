@@ -25,7 +25,7 @@ export function createCartContent() {
 
       cartContainer.innerHTML += `<div class="cart-item">
                                                 <div class="section-1">
-                                                    <img class="cart-product-image"src="${api}${
+                                                    <img class="cart-product-image"src="${
         item.product.image[0].url
       }" alt="${item.product.name}"> 
                                                 </div>
