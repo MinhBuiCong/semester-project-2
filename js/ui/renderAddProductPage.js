@@ -48,7 +48,7 @@ export async function renderAddPage(){
                           <input class="form-control" id="image"type="file" ${product.id ? '' : 'required'} >
                           </div>
                         <button class="btn btn-primary"type="submit" >
-                          ${product.id ? 'Update' : 'Create'}
+                          ${product.id ? 'Update product' : 'Create product'}
                         </button>
                                 `
 }

@@ -8,6 +8,14 @@
         width: 600px;
         padding: 2rem;
         box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.185);
-     
+        .form-control{
+            margin-bottom: 1rem;
+        }
     }
 } 
+
+@media screen and(max-width:600px ) {
+    .main-container > #addForm{
+    width: 400px;
+    }
+  }
