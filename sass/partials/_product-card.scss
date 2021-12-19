@@ -55,7 +55,6 @@
    align-items: center;
    width: 100%;
    a{
-    //  width: 100%;
      .text-center{
        width: 100%;
        display: flex;
@@ -65,7 +64,7 @@
          background-color: $cta-color;
          border: none;
          text-transform: uppercase;
-         padding: 0.5rem;
+         padding: 0.5rem 1rem;
          width: 100%;
        }
      }
