@@ -10,9 +10,10 @@ export async function getBanner() {
   try {
     const response = await fetch(bannerUrl);
     const banner = await response.json();
+    console.log(`banner`, banner)
     const bannerImg = banner.image[0].url;
     bannerContainer.style.backgroundImage = `url("${bannerImg}")`;
   } catch (error) {
     displayMessage(error, "404 - page not found", ".content");
   }
-}
+};
