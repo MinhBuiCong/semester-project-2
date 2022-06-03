@@ -1,42 +1,37 @@
-Holdaze Booking Website
+Tekshop Website
 
-Final project exam at Noroff (Front end development 2022)
+Semester-project at Noroff (Front end development 2021)
 
-- UX Prototype: https://xd.adobe.com/view/905c2292-7a04-40c4-a87a-39408022a1f7-c50f/
-- Live Version of Site deployed to: https://minh-cong-bui-project-exam-last.netlify.app/
+- Live Version of Site deployed to: https://tekshop.netlify.app/
 
 Dev Setup
 
 - Fork or clone this repo
-- Run npm install
 - Update env variables cp .env.example .env Replace your-api-key with your API_KEY. Then proceed.
-- Start the client by running npm run start, wait for Starting the development server...
+- Use your own API (Heroku site deleted)
 - Navigate to localhost:3000 in your browser, the page title should be Holidaze and you should see a styled page
 
 Features
 
 Visitor side
 
-- Search and Book accommodations
-- Autocomplete when searching
-- See detailed view of establishment
-- Make enquiry for establishment
-- Contact web administrators
+- Home page
+- Product page
+- Product detail page
+- Cart page
+- Checkout page
+- Contact page
 
 Admin side
 
 - Login to admin side
-- Admin Dashboard
-- Create and Delete
-- Establishment
-- View messages and delete
-- View enquires and delete
+- Create and Delete Products
 
 Technologies
 
 ** Front-End **
 
-- React JS, SASS, Bootstrap
+- Javascript, SASS, HTML, Bootstrap
 
 ** Back-End **
 
